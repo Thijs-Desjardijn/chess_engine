@@ -13,11 +13,21 @@ name = "chess-engine"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "polyglot" },
     { name = "python-chess" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "python-chess", specifier = ">=1.999" }]
+requires-dist = [
+    { name = "polyglot", specifier = ">=16.7.4" },
+    { name = "python-chess", specifier = ">=1.999" },
+]
+
+[[package]]
+name = "polyglot"
+version = "16.7.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e7/98/e24e2489114c5112b083714277204d92d372f5bbe00d5507acf40370edb9/polyglot-16.7.4.tar.gz", hash = "sha256:f7d9cca9a212622548e9416fb89f1238b994b8860ef49e03b7c82c67f9b6269b", size = 126296, upload-time = "2016-07-03T20:05:42.197Z" }
 
 [[package]]
 name = "python-chess"
