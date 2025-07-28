@@ -1,12 +1,12 @@
 # Chess Engine
 
-This is a Python-based chess engine that uses an opening book and a Minimax algorithm with **alpha-beta pruning** to evaluate and select moves. It is designed to be an **intermediate-level chess engine**.
+This is a Python-based chess engine that uses **square tables** and a **Minimax algorithm** with **alpha-beta pruning** to evaluate and select moves. It is designed to be an **intermediate-level chess engine**.
 
 ## Features
 
 - Minimax algorithm for move decision  
 - Alpha-beta pruning for performance  
-- Opening book support
+- Square tables for positional play
 
 ## Installation
 
@@ -16,7 +16,7 @@ If you don’t already have it installed, follow the instructions on the [uv Git
 Once `uv` is installed, add the project with:
 
 ```bash
-uv add https://github.com/Thijs-Desjardijn/chess_engine
+uv add git+https://github.com/Thijs-Desjardijn/chess_engine
 ```
 ## usage
 
