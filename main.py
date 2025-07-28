@@ -105,20 +105,6 @@ def sort_moves(board):
     scored_moves.sort(reverse=True, key=lambda x: x[0])
     return [move for score, move in scored_moves]
 
-def get_book_move(board, book_path):
-    try:
-        with chess.polyglot.open_reader(book_path) as reader:
-            entries = list(reader.find_all(board))
-            if entries:
-                # Pick one move randomly from book entries
-                entry = random.choice(entries)
-                return entry.move
-            else:
-                return None
-    except Exception as e:
-        print(f"Error opening book: {e}")
-        return None
-
 
 def evaluate_position(board):
     if board.is_checkmate():
@@ -252,7 +238,6 @@ def get_best_move(board, depth):
 def main():
     board = chess.Board()
     print(board)
-    book_path = "Cerebellum3Merge.bin"
     while not board.is_game_over():
         valid_move = False
         while not valid_move:
@@ -268,9 +253,7 @@ def main():
                 print("Invalid input! Format example: e2e4 or e7e8q")
         if board.is_game_over():
             break
-        engine_move = get_book_move(board, book_path)
-        if engine_move is None:
-            engine_move = get_best_move(board, 4)
+        engine_move = get_best_move(board, 4)
         print(f"Engine plays: {engine_move}")
         board.push(engine_move)
         print(board)
