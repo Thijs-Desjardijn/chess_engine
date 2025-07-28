@@ -27,7 +27,7 @@ Once `uv` is installed, add the project with:
 
 ```bash
 ```bash
-uv add https://github.com/Thijs-Desjardijn/chess_engine
+uv add git+https://github.com/Thijs-Desjardijn/chess_engine
 ```
 ## usage
 ```
