@@ -25,5 +25,5 @@ To run the program use:
 ```bash
 uv run main.py
 ```
-This will start a game against the engine with you playing as white. The engine uses **UCI format** (e2e4 for moving and e7e8q for promotions e.g.).
+This will start a game against the engine with you playing as white. The program uses **UCI format** (e2e4 for moving and e7e8q for promotions e.g.).
 
