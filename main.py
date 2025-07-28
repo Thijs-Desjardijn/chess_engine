@@ -1,7 +1,6 @@
 import chess
 import random
 import chess.polyglot
-import pygame 
 
 
 PAWN_PST = [
@@ -239,7 +238,7 @@ def get_best_move(board, depth):
     alpha = float('-inf')
     beta = float('inf')
 
-    for move in board.legal_moves():
+    for move in board.legal_moves:
         board.push(move)
         move_value = alphabeta(board, depth - 1, alpha, beta, False)
         board.pop()
@@ -251,7 +250,6 @@ def get_best_move(board, depth):
 
 
 def main():
-    pygame.init()
     board = chess.Board()
     print(board)
     book_path = "Cerebellum3Merge.bin"
@@ -268,6 +266,8 @@ def main():
                     print("Illegal move! Format example: e2e4 or e7e8q")
             except:
                 print("Invalid input! Format example: e2e4 or e7e8q")
+        if board.is_game_over():
+            break
         engine_move = get_book_move(board, book_path)
         if engine_move is None:
             engine_move = get_best_move(board, 4)
