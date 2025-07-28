@@ -1,35 +1,28 @@
-Chess Engine
-This is a Python-based chess engine that uses an opening book and a Minimax algorithm with alpha-beta pruning to evaluate and select moves. It is designed to be an intermediate-level chess engine.
+# Chess Engine
 
-Features
-Python implementation
+This is a Python-based chess engine that uses an opening book and a Minimax algorithm with **alpha-beta pruning** to evaluate and select moves. It is designed to be an **intermediate-level chess engine**.
 
-Minimax algorithm for move decision
+## Features
 
-Alpha-beta pruning for performance
+- Minimax algorithm for move decision  
+- Alpha-beta pruning for performance  
+- Opening book support
 
-Opening book support
+## Installation
 
-Modular and extendable codebase
+To use this engine, you'll need [**uv**](https://github.com/astral-sh/uv), a fast Python package manager.  
+If you don’t already have it installed, follow the instructions on the [uv GitHub page](https://github.com/astral-sh/uv).
 
-Installation
-To use this engine, you'll need uv, a fast Python package manager. If you don’t already have it installed, follow the instructions on the [uv GitHub page](https://github.com/astral-sh/uv).
+Once `uv` is installed, add the project with:
 
-Once uv is installed, add the project with:
-
+```bash
 uv add https://github.com/Thijs-Desjardijn/chess_engine
+```
+## usage
 
-Usage
-To run the engine, use:
+To run the program use:
 
+```bash
 uv run main.py
-
-This is solely a chess engine and does not include a graphical interface like Pygame. You can play a game against the engine using UCI-style move notation, for example:
-
-e2e4 — move a pawn from e2 to e4
-e7e8q — promote a pawn to a queen on e8
-
-Requirements
-Python 3.8+
-
-uv (for installation and dependency management)
+```
+This will start a game against the engine with you playing as white. The program uses **UCI format** (e2e4 for moving and e7e8q for promotions e.g.).
